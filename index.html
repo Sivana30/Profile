@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Portfolio Website" />
+  <title>My Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
+
+<header class="fixed w-full bg-white dark:bg-gray-900 shadow z-50">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold">MyPortfolio</h1>
+    <ul class="flex gap-6">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="toggleDarkMode()">🌙</button>
+  </nav>
+</header>
+
+<section id="home" class="h-screen flex items-center justify-center text-center">
+  <div id="hero"></div>
+</section>
+
+<section id="about" class="py-20 max-w-5xl mx-auto px-4">
+  <h2 class="text-2xl font-bold mb-4">About Me</h2>
+  <p id="aboutText"></p>
+</section>
+
+<section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6">Skills</h2>
+    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </div>
+</section>
+
+<section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+  <h2 class="text-2xl font-bold mb-6">Projects</h2>
+  <div id="projectsContainer" class="grid md:grid-cols-3 gap-6"></div>
+</section>
+
+<section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <form class="flex flex-col gap-4">
+      <input type="text" placeholder="Name" class="p-2 border rounded" />
+      <input type="email" placeholder="Email" class="p-2 border rounded" />
+      <textarea placeholder="Message" class="p-2 border rounded"></textarea>
+      <button class="bg-blue-500 text-white py-2 rounded">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer class="text-center p-4">
+  <p>© 2026 MyPortfolio</p>
+</footer>
+
+<script>
+function toggleDarkMode() {
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+}
+
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.classList.add('dark');
+}
+
+// Load data.json
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+
+    // Hero
+    document.getElementById('hero').innerHTML = `
+      <img src="${data.hero.image}" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover" />
+      <h2 class="text-3xl font-bold">${data.hero.name}</h2>
+      <p class="text-blue-500">${data.hero.title}</p>
+      <p class="mt-2">${data.hero.description}</p>
+    `;
+
+    // About
+    document.getElementById('aboutText').textContent = data.about;
+
+    // Skills
+    const skillsHTML = data.skills.map(skill => `
+      <div class="p-4 bg-white dark:bg-gray-700 rounded shadow hover:scale-105 transition">${skill}</div>
+    `).join('');
+    document.getElementById('skillsContainer').innerHTML = skillsHTML;
+
+    // Projects
+    const projectsHTML = data.projects.map(p => `
+      <div class="bg-white dark:bg-gray-700 shadow rounded overflow-hidden">
+        <img src="${p.image}" class="w-full" />
+        <div class="p-4">
+          <h3 class="font-semibold">${p.title}</h3>
+          <p class="text-sm">${p.description}</p>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('projectsContainer').innerHTML = projectsHTML;
+
+  });
+</script>
+
+</body>
+</html>
