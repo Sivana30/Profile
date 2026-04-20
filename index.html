@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional Portfolio Website" />
+  <meta name="description" content="Sivana Amelia Irmayanti Portfolio" />
   <title>Sivana Amelia | Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <script>
@@ -15,33 +16,51 @@
   </script>
 
   <style>
-    html { scroll-padding-top: 85px; }
-    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; transition: background-color 0.5s ease; }
+    /* Mengatur jarak agar saat menu diklik, judul tidak tertutup navbar */
+    html { scroll-padding-top: 90px; }
     
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      overflow-x: hidden; 
+      transition: background-color 0.5s ease; 
+    }
+    
+    /* Mode Terang (Light Mode) */
     body:not(.dark) { background-color: #99C2FF; }
     .glass-nav { 
       background-color: rgba(102, 163, 255, 0.9); 
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
     
+    /* Mode Gelap (Dark Mode) */
     .dark body { background-color: #001433; }
     .dark .glass-nav {
-      background-color: rgba(0, 14, 36, 0.95);
+      background-color: rgba(0, 14, 36, 0.95); /* #000E24 */
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
     }
 
+    /* Efek hover link navigasi */
     .nav-link { @apply relative transition-all duration-300; }
-    .nav-link::after { content: ''; @apply absolute w-0 h-0.5 bg-white bottom-0 left-0 transition-all duration-300; }
+    .nav-link::after { 
+      content: ''; 
+      @apply absolute w-0 h-0.5 bg-white bottom-0 left-0 transition-all duration-300; 
+    }
     .nav-link:hover::after { @apply w-full; }
+
+    /* Fix area klik di Mobile */
+    #socialsContainer a {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
   </style>
 </head>
 
 <body class="text-gray-900 dark:text-gray-100">
 
-<header class="fixed w-full z-50 transition-all duration-300 glass-nav shadow-md">
+<header class="fixed w-full z-[100] transition-all duration-300 glass-nav shadow-md">
   <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-xl font-bold tracking-tighter hover:scale-105 transition-transform cursor-default">
+    <h1 class="text-xl font-bold tracking-tighter">
       SIVANA<span class="text-white dark:text-blue-400">.</span>
     </h1>
     <ul class="hidden md:flex gap-8 font-semibold">
@@ -49,9 +68,9 @@
       <li><a href="#about" class="nav-link hover:text-white dark:hover:text-blue-300">About</a></li>
       <li><a href="#skills" class="nav-link hover:text-white dark:hover:text-blue-300">Skills</a></li>
       <li><a href="#projects" class="nav-link hover:text-white dark:hover:text-blue-300">Projects</a></li>
-      <li><a href="#contact" class="nav-link hover:text-white dark:hover:text-blue-300">Contact</a></li>
+      <li><a href="#contact" class="nav-link hover:text-white dark:hover:text-blue-300">Connect</a></li>
     </ul>
-    <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-blue-400 dark:hover:bg-blue-900 transition-all text-xl">
+    <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-blue-400 dark:hover:bg-blue-900 transition-all text-xl shadow-inner">
       <span class="dark:hidden">🌙</span>
       <span class="hidden dark:inline">☀️</span>
     </button>
@@ -59,10 +78,10 @@
 </header>
 
 <section id="home" class="pt-40 pb-20 flex items-center justify-center text-center">
-  <div id="hero" class="max-w-2xl px-4" data-aos="fade-up"></div>
+  <div id="hero" class="max-w-2xl px-6" data-aos="fade-up"></div>
 </section>
 
-<section id="about" class="py-20 max-w-5xl mx-auto px-4 overflow-hidden border-t border-white/10 dark:border-blue-900/20">
+<section id="about" class="py-20 max-w-5xl mx-auto px-6 border-t border-white/10 dark:border-blue-900/20">
   <div data-aos="fade-right">
     <h2 class="text-3xl font-bold mb-4 inline-block border-b-4 border-white dark:border-blue-500">About Me</h2>
     <p id="aboutText" class="text-lg leading-relaxed mt-4 font-medium dark:text-blue-100"></p>
@@ -70,35 +89,112 @@
 </section>
 
 <section id="skills" class="py-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm">
-  <div class="max-w-5xl mx-auto px-4">
+  <div class="max-w-5xl mx-auto px-6">
     <h2 class="text-3xl font-bold mb-10 text-center md:text-left" data-aos="fade-up">Expertise</h2>
-    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-5 gap-6"></div>
+    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6"></div>
   </div>
 </section>
 
-<section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+<section id="projects" class="py-20 max-w-6xl mx-auto px-6">
   <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Recent Works</h2>
-  <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  <div id="projectsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 </section>
 
-<section id="contact" class="py-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm">
-  <div class="max-w-4xl mx-auto px-4 text-center">
+<section id="contact" class="py-24 bg-white/10 dark:bg-black/20 backdrop-blur-sm">
+  <div class="max-w-4xl mx-auto px-8 text-center">
     <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Connect With Me</h2>
     <p class="mb-10 font-medium opacity-80" data-aos="fade-up" data-aos-delay="100">Let's collaborate or just say hi!</p>
     
-    <div id="socialsContainer" class="flex flex-wrap justify-center gap-6" data-aos="zoom-in">
+    <div id="socialsContainer" class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
       </div>
   </div>
 </section>
 
 <footer class="text-center p-10 border-t border-white/10 dark:border-blue-900/30">
-  <p class="font-medium opacity-70">© 2026 Sivana Amelia Irmayanti</p>
+  <p class="font-medium opacity-70">© 2026 Sivana Amelia Irmayanti. Crafted with ✨</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
 AOS.init({ once: true, duration: 800 });
 
+// DATA PORTFOLIO (Dimasukkan langsung agar aman dibuka di HP)
+const portfolioData = {
+  "hero": {
+    "name": "Sivana Amelia Irmayanti",
+    "title": "Web | Gamer | Admin Antusias",
+    "description": "I build modern and responsive web applications with passion and precision.",
+    "image": "AMEL.jpeg" 
+  },
+  "about": "Saya adalah developer yang fokus pada pembuatan website modern dan user-friendly. Memiliki antusiasme tinggi dalam teknologi web dan dunia gaming yang membantu mengasah kreativitas saya.",
+  "skills": ["HTML5", "CSS3", "JavaScript", "Tailwind", "React JS"],
+  "socials": [
+    { "platform": "Instagram", "link": "https://instagram.com/sivanaamelia", "icon": "📸" },
+    { "platform": "GitHub", "link": "https://github.com/sivanaamelia", "icon": "💻" },
+    { "platform": "LinkedIn", "link": "#", "icon": "👔" },
+    { "platform": "Discord", "link": "#", "icon": "🎮" }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "Website portfolio pribadi dengan fitur Dark Mode dan animasi AOS.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+    },
+    {
+      "title": "Dashboard Admin",
+      "description": "Interface dashboard modern untuk manajemen data administratif.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"
+    }
+  ]
+};
+
+// Fungsi Render Konten
+function initPortfolio() {
+    const data = portfolioData;
+
+    // Hero
+    document.getElementById('hero').innerHTML = `
+      <img src="${data.hero.image}" alt="Profile" class="mx-auto rounded-full mb-8 w-44 h-44 object-cover shadow-2xl border-4 border-white dark:border-blue-500 p-1 hover:scale-105 transition-transform duration-500" />
+      <h2 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight text-blue-950 dark:text-white">${data.hero.name}</h2>
+      <p class="text-xl text-blue-900 dark:text-blue-400 font-bold mb-6 uppercase tracking-widest">${data.hero.title}</p>
+      <p class="text-blue-950 dark:text-blue-100 text-lg max-w-lg mx-auto font-medium leading-relaxed">${data.hero.description}</p>
+    `;
+
+    // About
+    document.getElementById('aboutText').textContent = data.about;
+
+    // Skills
+    document.getElementById('skillsContainer').innerHTML = data.skills.map((skill, i) => `
+      <div class="p-5 bg-white/20 dark:bg-blue-900/20 rounded-2xl border border-white/10 dark:border-blue-800/50 text-center font-bold backdrop-blur-sm shadow-sm" data-aos="fade-up" data-aos-delay="${i*100}">
+        ${skill}
+      </div>
+    `).join('');
+
+    // Projects
+    document.getElementById('projectsContainer').innerHTML = data.projects.map((p, i) => `
+      <div class="bg-white/20 dark:bg-blue-900/20 rounded-3xl shadow-xl overflow-hidden border border-white/10 dark:border-blue-800/50 group" data-aos="fade-up" data-aos-delay="${i*200}">
+        <div class="overflow-hidden h-52">
+          <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="font-bold text-xl mb-2 text-blue-900 dark:text-blue-300">${p.title}</h3>
+          <p class="text-blue-950 dark:text-blue-100 text-sm font-medium leading-relaxed">${p.description}</p>
+        </div>
+      </div>
+    `).join('');
+
+    // Social Media (Fixed for Mobile Click)
+    document.getElementById('socialsContainer').innerHTML = data.socials.map(s => `
+      <a href="${s.link}" target="_blank" rel="noopener noreferrer" 
+         class="flex items-center justify-center gap-3 px-8 py-4 w-full sm:w-auto bg-white/40 dark:bg-blue-600 rounded-2xl font-bold shadow-lg hover:-translate-y-2 active:scale-95 transition-all duration-300">
+        <span class="text-2xl">${s.icon}</span>
+        <span class="tracking-wide">${s.platform}</span>
+      </a>
+    `).join('');
+}
+
+// Dark Mode Logic
 function toggleDarkMode() {
   document.documentElement.classList.toggle('dark');
   localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
@@ -108,48 +204,9 @@ if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && w
   document.documentElement.classList.add('dark');
 }
 
-fetch('data.json')
-  .then(res => res.json())
-  .then(data => {
-    // Hero
-    document.getElementById('hero').innerHTML = `
-      <img src="${data.hero.image}" class="mx-auto rounded-full mb-8 w-44 h-44 object-cover shadow-2xl border-4 border-white dark:border-blue-500 p-1 hover:scale-105 transition-transform" />
-      <h2 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">${data.hero.name}</h2>
-      <p class="text-xl text-blue-900 dark:text-blue-400 font-bold mb-6 uppercase tracking-widest">${data.hero.title}</p>
-      <p class="text-blue-950 dark:text-blue-100 text-lg max-w-lg mx-auto font-medium">${data.hero.description}</p>
-    `;
-
-    // About
-    document.getElementById('aboutText').textContent = data.about;
-
-    // Skills
-    document.getElementById('skillsContainer').innerHTML = data.skills.map((skill, i) => `
-      <div class="p-5 bg-white/20 dark:bg-blue-900/20 rounded-2xl border border-white/10 dark:border-blue-800/50 text-center font-bold backdrop-blur-sm hover:bg-white/40 transition-all cursor-default" data-aos="fade-up" data-aos-delay="${i*100}">
-        ${skill}
-      </div>
-    `).join('');
-
-    // Projects
-    document.getElementById('projectsContainer').innerHTML = data.projects.map((p, i) => `
-      <div class="bg-white/20 dark:bg-blue-900/20 rounded-2xl shadow-xl overflow-hidden border border-white/10 dark:border-blue-800/50 group" data-aos="fade-up" data-aos-delay="${i*200}">
-        <div class="overflow-hidden h-48">
-          <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-        </div>
-        <div class="p-6 text-left">
-          <h3 class="font-bold text-xl mb-2 text-blue-900 dark:text-blue-300">${p.title}</h3>
-          <p class="text-blue-950 dark:text-blue-100 text-sm font-medium">${p.description}</p>
-        </div>
-      </div>
-    `).join('');
-
-    // Social Media
-    document.getElementById('socialsContainer').innerHTML = data.socials.map((s, i) => `
-      <a href="${s.link}" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-white/30 dark:bg-blue-900/30 rounded-full border border-white/20 dark:border-blue-800/50 font-bold hover:bg-white dark:hover:bg-blue-600 transition-all hover:-translate-y-2 shadow-lg">
-        <span class="text-2xl">${s.icon}</span>
-        <span>${s.platform}</span>
-      </a>
-    `).join('');
-  });
+// Jalankan Inisialisasi
+initPortfolio();
 </script>
+
 </body>
 </html>
