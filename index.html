@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional Portfolio Website" />
-  <title>My Portfolio</title>
+  <title>Sivana Amelia | Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -20,55 +20,56 @@
 
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
 
-<header class="fixed w-full bg-white dark:bg-gray-900 shadow z-50">
+<header class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow z-50">
   <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
     <h1 class="text-xl font-bold">MyPortfolio</h1>
-    <ul class="flex gap-6">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul class="hidden md:flex gap-6">
+      <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-500">About</a></li>
+      <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+      <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+      <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
     </ul>
-    <button onclick="toggleDarkMode()">🌙</button>
+    <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">🌙</button>
   </nav>
 </header>
 
-<section id="home" class="h-screen flex items-center justify-center text-center">
-  <div id="hero"></div>
+<section id="home" class="pt-32 pb-16 flex items-center justify-center text-center">
+  <div id="hero" class="max-w-2xl px-4">
+    </div>
 </section>
 
-<section id="about" class="py-20 max-w-5xl mx-auto px-4">
-  <h2 class="text-2xl font-bold mb-4">About Me</h2>
-  <p id="aboutText"></p>
+<section id="about" class="py-16 max-w-5xl mx-auto px-4">
+  <h2 class="text-2xl font-bold mb-4 inline-block border-b-4 border-blue-500">About Me</h2>
+  <p id="aboutText" class="text-lg leading-relaxed mt-4"></p>
 </section>
 
-<section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+<section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
   <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-6">Skills</h2>
-    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+    <h2 class="text-2xl font-bold mb-8">Skills</h2>
+    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
   </div>
 </section>
 
 <section id="projects" class="py-20 max-w-6xl mx-auto px-4">
-  <h2 class="text-2xl font-bold mb-6">Projects</h2>
-  <div id="projectsContainer" class="grid md:grid-cols-3 gap-6"></div>
+  <h2 class="text-2xl font-bold mb-8">Projects</h2>
+  <div id="projectsContainer" class="grid md:grid-cols-3 gap-8"></div>
 </section>
 
-<section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
   <div class="max-w-xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <h2 class="text-2xl font-bold mb-6">Contact</h2>
     <form class="flex flex-col gap-4">
-      <input type="text" placeholder="Name" class="p-2 border rounded" />
-      <input type="email" placeholder="Email" class="p-2 border rounded" />
-      <textarea placeholder="Message" class="p-2 border rounded"></textarea>
-      <button class="bg-blue-500 text-white py-2 rounded">Send</button>
+      <input type="text" placeholder="Name" class="p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
+      <input type="email" placeholder="Email" class="p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
+      <textarea placeholder="Message" rows="4" class="p-3 border rounded dark:bg-gray-700 dark:border-gray-600"></textarea>
+      <button class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-semibold transition">Send Message</button>
     </form>
   </div>
 </section>
 
-<footer class="text-center p-4">
-  <p>© 2026 MyPortfolio</p>
+<footer class="text-center p-8 border-t dark:border-gray-800">
+  <p>© 2026 Sivana Amelia Irmayanti</p>
 </footer>
 
 <script>
@@ -81,17 +82,17 @@ if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.add('dark');
 }
 
-// Load data.json
+// Memuat data dari data.json
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
 
     // Hero
     document.getElementById('hero').innerHTML = `
-      <img src="${data.hero.image}" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover" />
-      <h2 class="text-3xl font-bold">${data.hero.name}</h2>
-      <p class="text-blue-500">${data.hero.title}</p>
-      <p class="mt-2">${data.hero.description}</p>
+      <img src="${data.hero.image}" alt="${data.hero.name}" class="mx-auto rounded-full mb-6 w-48 h-48 object-cover shadow-xl border-4 border-blue-500" />
+      <h2 class="text-4xl font-bold mb-2">${data.hero.name}</h2>
+      <p class="text-xl text-blue-500 font-medium mb-4">${data.hero.title}</p>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">${data.hero.description}</p>
     `;
 
     // About
@@ -99,23 +100,28 @@ fetch('data.json')
 
     // Skills
     const skillsHTML = data.skills.map(skill => `
-      <div class="p-4 bg-white dark:bg-gray-700 rounded shadow hover:scale-105 transition">${skill}</div>
+      <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 text-center font-medium hover:shadow-md hover:-translate-y-1 transition duration-300">
+        ${skill}
+      </div>
     `).join('');
     document.getElementById('skillsContainer').innerHTML = skillsHTML;
 
     // Projects
     const projectsHTML = data.projects.map(p => `
-      <div class="bg-white dark:bg-gray-700 shadow rounded overflow-hidden">
-        <img src="${p.image}" class="w-full" />
-        <div class="p-4">
-          <h3 class="font-semibold">${p.title}</h3>
-          <p class="text-sm">${p.description}</p>
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">${p.title}</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">${p.description}</p>
         </div>
       </div>
     `).join('');
     document.getElementById('projectsContainer').innerHTML = projectsHTML;
 
-  });
+  })
+  .catch(err => console.error('Gagal memuat data:', err));
 </script>
 
 </body>
