@@ -7,6 +7,12 @@
   },
   "about": "Saya adalah developer yang fokus pada pembuatan website modern dan user-friendly.",
   "skills": ["HTML", "CSS", "JavaScript", "React", "Python"],
+  "socials": [
+    { "platform": "Instagram", "link": "https://instagram.com/username", "icon": "📸" },
+    { "platform": "GitHub", "link": "https://github.com/username", "icon": "💻" },
+    { "platform": "LinkedIn", "link": "https://linkedin.com/in/username", "icon": "👔" },
+    { "platform": "Discord", "link": "#", "icon": "🎮" }
+  ],
   "projects": [
     {
       "title": "Portfolio Website",
