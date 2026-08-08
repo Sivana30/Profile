@@ -1,50 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sivana Amelia Irmayanti Portfolio" />
-  <title>Sivana Amelia | Portfolio</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Sivana Amelia Irmayanti | Staf Administrasi & Operasional</title>
+  <meta name="title" content="Sivana Amelia Irmayanti | Staf Administrasi & Operasional" />
+  <meta name="description" content="Portofolio Sivana Amelia Irmayanti — Lulusan S1 Teknik Informatika IPK 3,80 (Pujian), berpengalaman di administrasi perkantoran, pengelolaan dokumen, dan koordinasi operasional." />
+  <meta name="keywords" content="Sivana Amelia, Administrasi, Operasional, Microsoft Office, Customer Service, Portfolio" />
+  <meta name="author" content="Sivana Amelia Irmayanti" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sivanaamelia.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sivanaamelia.github.io/" />
+  <meta property="og:title" content="Sivana Amelia Irmayanti | Staf Administrasi & Operasional" />
+  <meta property="og:description" content="Portofolio Sivana Amelia Irmayanti — Lulusan S1 Teknik Informatika IPK 3,80 (Pujian), berpengalaman di administrasi perkantoran dan koordinasi operasional." />
+  <meta property="og:image" content="assets/images/AMEL.avif" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sivana Amelia Irmayanti | Staf Administrasi & Operasional" />
+  <meta name="twitter:description" content="Portofolio Sivana Amelia Irmayanti — Lulusan S1 Teknik Informatika IPK 3,80 (Pujian), berpengalaman di administrasi perkantoran dan koordinasi operasional." />
+  <meta name="twitter:image" content="assets/images/AMEL.avif" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/AMEL.avif" type="image/avif" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sivana Amelia Irmayanti",
+    "jobTitle": "Staf Administrasi & Operasional",
+    "url": "https://sivanaamelia.github.io/",
+    "image": "assets/images/AMEL.avif",
+    "sameAs": [
+      "https://instagram.com/sivanaamelia",
+      "https://github.com/sivanaamelia"
+    ]
+  }
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <script>
     tailwind.config = { darkMode: 'class' }
   </script>
 
   <style>
-    /* Mengatur jarak agar saat menu diklik, judul tidak tertutup navbar */
     html { scroll-padding-top: 90px; }
-    
-    body { 
-      font-family: 'Poppins', sans-serif; 
-      overflow-x: hidden; 
-      transition: background-color 0.5s ease; 
-    }
-    
-    /* Mode Terang (Light Mode) */
-    body:not(.dark) { background-color: #99C2FF; }
-    .glass-nav { 
-      background-color: rgba(102, 163, 255, 0.9); 
-      backdrop-filter: blur(10px);
-    }
-    
-    /* Mode Gelap (Dark Mode) */
-    .dark body { background-color: #001433; }
-    .dark .glass-nav {
-      background-color: rgba(0, 14, 36, 0.95); /* #000E24 */
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease;
+      position: relative;
     }
 
-    /* Efek hover link navigasi */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    /* ==== 3D Background Orbs ==== */
+    .bg-orbs {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.55;
+      animation: orbFloat 20s ease-in-out infinite;
+    }
+    .orb-1 { width: 420px; height: 420px; top: -10%; left: -5%;  background: #f472b6; animation-duration: 18s; }
+    .orb-2 { width: 340px; height: 340px; top: 30%;  right: -8%; background: #c084fc; animation-duration: 22s; animation-delay: -4s; }
+    .orb-3 { width: 280px; height: 280px; bottom: -5%; left: 20%; background: #fb7185; animation-duration: 25s; animation-delay: -8s; }
+    .orb-4 { width: 200px; height: 200px; top: 55%;  left: 60%;  background: #e879f9; animation-duration: 20s; animation-delay: -12s; }
+    .orb-5 { width: 160px; height: 160px; top: 10%;  left: 50%;  background: #fda4af; animation-duration: 24s; animation-delay: -6s; }
+
+    .dark .orb { opacity: 0.3; filter: blur(90px); }
+
+    @keyframes orbFloat {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      25%      { transform: translate3d(30px, -40px, 20px) scale(1.08); }
+      50%      { transform: translate3d(-20px, 30px, -10px) scale(0.95); }
+      75%      { transform: translate3d(40px, 20px, 15px) scale(1.05); }
+    }
+
+    /* Light Mode */
+    body:not(.dark) { background-color: #fdf2f8; }
+    .glass-nav {
+      background-color: rgba(253, 242, 248, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(236, 72, 153, 0.15);
+    }
+
+    /* Dark Mode */
+    .dark body { background-color: #0f0012; }
+    .dark .glass-nav {
+      background-color: rgba(15, 0, 18, 0.9);
+      border-bottom: 1px solid rgba(236, 72, 153, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    /* Nav links */
     .nav-link { @apply relative transition-all duration-300; }
-    .nav-link::after { 
-      content: ''; 
-      @apply absolute w-0 h-0.5 bg-white bottom-0 left-0 transition-all duration-300; 
+    .nav-link::after {
+      content: '';
+      @apply absolute w-0 h-0.5 bottom-0 left-0 transition-all duration-300;
+      background: #ec4899;
     }
     .nav-link:hover::after { @apply w-full; }
 
@@ -53,64 +135,221 @@
       -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
     }
+
+    /* ==== Professional Toggle Switch ==== */
+    .toggle-track {
+      width: 58px;
+      height: 30px;
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      border: 2px solid rgba(236, 72, 153, 0.3);
+      transition: background 0.4s ease, border-color 0.4s ease;
+    }
+    .dark .toggle-track {
+      background: linear-gradient(135deg, #1a0020, #2d0040);
+      border-color: rgba(168, 85, 247, 0.4);
+    }
+    .toggle-track .toggle-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), background 0.4s ease, box-shadow 0.4s ease;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);
+    }
+    .dark .toggle-track .toggle-thumb {
+      transform: translateX(28px);
+      background: #7c3aed;
+      box-shadow: 0 2px 12px rgba(124, 58, 237, 0.5);
+    }
+    .toggle-track .toggle-icons {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6px;
+      pointer-events: none;
+      font-size: 13px;
+    }
+    .toggle-track:hover {
+      border-color: rgba(236, 72, 153, 0.5);
+    }
+    .dark .toggle-track:hover {
+      border-color: rgba(168, 85, 247, 0.6);
+    }
+
+    /* ==== Programming Language Cards ==== */
+    .lang-card {
+      transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), box-shadow 0.4s ease;
+    }
+    .lang-card:hover {
+      transform: translateY(-12px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(236, 72, 153, 0.25);
+    }
+    .lang-card .lang-icon {
+      animation: langBounce 3s ease-in-out infinite;
+    }
+    .lang-card:nth-child(2) .lang-icon { animation-delay: 0.3s; }
+    .lang-card:nth-child(3) .lang-icon { animation-delay: 0.6s; }
+    .lang-card:nth-child(4) .lang-icon { animation-delay: 0.9s; }
+    .lang-card:nth-child(5) .lang-icon { animation-delay: 1.2s; }
+
+    @keyframes langBounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+
+    .lang-card .lang-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .lang-card:hover .lang-glow { opacity: 0.15; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orb { animation: none; }
+      .lang-card .lang-icon { animation: none; }
+    }
   </style>
 </head>
 
 <body class="text-gray-900 dark:text-gray-100">
 
+<!-- 3D Floating Background -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <div class="orb orb-5"></div>
+</div>
+
 <header class="fixed w-full z-[100] transition-all duration-300 glass-nav shadow-md">
   <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-xl font-bold tracking-tighter">
-      SIVANA<span class="text-white dark:text-blue-400">.</span>
-    </h1>
+    <a href="#home" class="text-xl font-bold tracking-tighter" aria-label="Sivana Amelia - beranda">
+      SIVANA<span class="text-pink-500 dark:text-pink-400">.</span>
+    </a>
     <ul class="hidden md:flex gap-8 font-semibold">
-      <li><a href="#home" class="nav-link hover:text-white dark:hover:text-blue-300">Home</a></li>
-      <li><a href="#about" class="nav-link hover:text-white dark:hover:text-blue-300">About</a></li>
-      <li><a href="#skills" class="nav-link hover:text-white dark:hover:text-blue-300">Skills</a></li>
-      <li><a href="#projects" class="nav-link hover:text-white dark:hover:text-blue-300">Projects</a></li>
-      <li><a href="#contact" class="nav-link hover:text-white dark:hover:text-blue-300">Connect</a></li>
+      <li><a href="#home" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">Home</a></li>
+      <li><a href="#about" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">About</a></li>
+      <li><a href="#experience" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">Experience</a></li>
+      <li><a href="#skills" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">Skills</a></li>
+      <li><a href="#projects" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">Projects</a></li>
+      <li><a href="#contact" class="nav-link hover:text-pink-600 dark:hover:text-pink-300">Connect</a></li>
     </ul>
-    <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-blue-400 dark:hover:bg-blue-900 transition-all text-xl shadow-inner">
-      <span class="dark:hidden">🌙</span>
-      <span class="hidden dark:inline">☀️</span>
-    </button>
+    <div class="toggle-track" onclick="toggleDarkMode()" role="switch" aria-label="Toggle dark mode" tabindex="0">
+      <div class="toggle-icons">
+        <span>☀️</span>
+        <span>🌙</span>
+      </div>
+      <div class="toggle-thumb"></div>
+    </div>
   </nav>
 </header>
 
-<section id="home" class="pt-40 pb-20 flex items-center justify-center text-center">
-  <div id="hero" class="max-w-2xl px-6" data-aos="fade-up"></div>
+<section id="home" class="relative pt-40 pb-20 flex items-center justify-center text-center overflow-hidden">
+  <div id="hero" class="relative max-w-2xl px-6" data-aos="fade-up">
+    <div id="hero-3d" style="transform-style: preserve-3d;"></div>
+    <div id="hero-cta" class="mt-8"></div>
+  </div>
 </section>
 
-<section id="about" class="py-20 max-w-5xl mx-auto px-6 border-t border-white/10 dark:border-blue-900/20">
+<section id="about" class="relative py-20 max-w-5xl mx-auto px-6 border-t border-white/10 dark:border-pink-900/20">
   <div data-aos="fade-right">
-    <h2 class="text-3xl font-bold mb-4 inline-block border-b-4 border-white dark:border-blue-500">About Me</h2>
-    <p id="aboutText" class="text-lg leading-relaxed mt-4 font-medium dark:text-blue-100"></p>
+    <h2 class="text-3xl font-bold mb-4 inline-block border-b-4 border-white dark:border-pink-500">Profil Singkat</h2>
+    <p id="aboutText" class="text-lg leading-relaxed mt-4 font-medium dark:text-pink-100"></p>
   </div>
+  <div id="strengthsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"></div>
 </section>
 
-<section id="skills" class="py-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm">
+<section id="education" class="relative py-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm overflow-hidden">
   <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center md:text-left" data-aos="fade-up">Expertise</h2>
-    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6"></div>
+    <h2 class="text-3xl font-bold mb-10 text-center md:text-left" data-aos="fade-up">Pendidikan</h2>
+    <div id="educationContainer" data-aos="fade-up" data-aos-delay="100"></div>
   </div>
 </section>
 
-<section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+<section id="experience" class="relative py-20 max-w-5xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Pengalaman Kerja</h2>
+  <div id="experienceContainer" class="space-y-10"></div>
+</section>
+
+<section id="skills" class="relative py-20 bg-white/10 dark:bg-black/10 backdrop-blur-sm overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center md:text-left" data-aos="fade-up">Keahlian</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-5 text-pink-800 dark:text-pink-300">Administrasi & Komputer</h3>
+        <div id="skillsAdminContainer" class="space-y-3"></div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="150">
+        <h3 class="text-xl font-bold mb-5 text-pink-800 dark:text-pink-300">Personal & Komunikasi</h3>
+        <div id="skillsPersonalContainer" class="space-y-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="languages" class="relative py-20 max-w-5xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Bahasa Pemrograman</h2>
+  <div id="languagesContainer" class="flex flex-wrap justify-center gap-8"></div>
+</section>
+
+<section id="certifications" class="relative py-20 max-w-5xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Sertifikasi & Penghargaan</h2>
+  <div id="certsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+</section>
+
+<section id="projects" class="relative py-20 max-w-6xl mx-auto px-6 overflow-hidden">
   <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Recent Works</h2>
   <div id="projectsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 </section>
 
-<section id="contact" class="py-24 bg-white/10 dark:bg-black/20 backdrop-blur-sm">
-  <div class="max-w-4xl mx-auto px-8 text-center">
+<section id="contact" class="relative py-24 bg-white/10 dark:bg-black/20 backdrop-blur-sm overflow-hidden">
+  <div class="max-w-2xl mx-auto px-8 text-center">
     <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Connect With Me</h2>
-    <p class="mb-10 font-medium opacity-80" data-aos="fade-up" data-aos-delay="100">Let's collaborate or just say hi!</p>
-    
-    <div id="socialsContainer" class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+    <p class="mb-10 font-medium opacity-80" data-aos="fade-up" data-aos-delay="100">Kirim pesan langsung ke WhatsApp saya!</p>
+
+    <form id="waForm" class="space-y-5 text-left" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <label for="waName" class="block text-sm font-bold mb-1.5">Nama</label>
+        <input type="text" id="waName" name="name" required placeholder="Masukkan nama kamu"
+               class="w-full px-5 py-3 rounded-2xl bg-white/50 dark:bg-white/10 border border-pink-200 dark:border-pink-800/50 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 dark:focus:ring-pink-700 outline-none font-medium transition-all duration-300" />
       </div>
+      <div>
+        <label for="waCompany" class="block text-sm font-bold mb-1.5">Perusahaan</label>
+        <input type="text" id="waCompany" name="company" required placeholder="Nama perusahaan"
+               class="w-full px-5 py-3 rounded-2xl bg-white/50 dark:bg-white/10 border border-pink-200 dark:border-pink-800/50 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 dark:focus:ring-pink-700 outline-none font-medium transition-all duration-300" />
+      </div>
+      <div>
+        <label for="waMessage" class="block text-sm font-bold mb-1.5">Pesan</label>
+        <textarea id="waMessage" name="message" required rows="4" placeholder="Tulis pesan kamu di sini..."
+                  class="w-full px-5 py-3 rounded-2xl bg-white/50 dark:bg-white/10 border border-pink-200 dark:border-pink-800/50 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 dark:focus:ring-pink-700 outline-none font-medium resize-none transition-all duration-300"></textarea>
+      </div>
+      <button type="submit"
+              class="w-full flex items-center justify-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl shadow-lg hover:-translate-y-1 active:scale-95 transition-all duration-300 text-lg">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Kirim via WhatsApp
+      </button>
+    </form>
+
+    <div id="socialsContainer" class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mt-10"></div>
   </div>
 </section>
 
-<footer class="text-center p-10 border-t border-white/10 dark:border-blue-900/30">
+<footer class="text-center p-10 border-t border-white/10 dark:border-pink-900/30">
   <p class="font-medium opacity-70">© 2026 Sivana Amelia Irmayanti. Crafted with ✨</p>
 </footer>
 
@@ -119,93 +358,201 @@
 <script>
 AOS.init({ once: true, duration: 800 });
 
-// DATA PORTFOLIO (Dimasukkan langsung agar aman dibuka di HP)
-const portfolioData = {
-  "hero": {
-    "name": "Sivana Amelia Irmayanti",
-    "title": "Web | Gamer | Admin Antusias",
-    "description": "I build modern and responsive web applications with passion and precision.",
-    "image": "AMEL.jpeg" 
-  },
-  "about": "Saya adalah developer yang fokus pada pembuatan website modern dan user-friendly. Memiliki antusiasme tinggi dalam teknologi web dan dunia gaming yang membantu mengasah kreativitas saya.",
-  "skills": ["HTML5", "CSS3", "JavaScript", "Tailwind", "React JS"],
-  "socials": [
-    { "platform": "Instagram", "link": "https://instagram.com/sivanaamelia", "icon": "📸" },
-    { "platform": "GitHub", "link": "https://github.com/sivanaamelia", "icon": "💻" },
-    { "platform": "LinkedIn", "link": "#", "icon": "👔" },
-    { "platform": "Discord", "link": "#", "icon": "🎮" }
-  ],
-  "projects": [
-    {
-      "title": "Portfolio Website",
-      "description": "Website portfolio pribadi dengan fitur Dark Mode dan animasi AOS.",
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
-    },
-    {
-      "title": "Dashboard Admin",
-      "description": "Interface dashboard modern untuk manajemen data administratif.",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"
-    }
-  ]
-};
+/* ==== Dark Mode Logic (langsung, sebelum fetch) ==== */
+function toggleDarkMode() {
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+}
+if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+}
 
-// Fungsi Render Konten
-function initPortfolio() {
-    const data = portfolioData;
+/* Keyboard support for toggle */
+document.querySelector('.toggle-track').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleDarkMode(); }
+});
 
+/* ==== Ambil semua data dari data.json ==== */
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    initPortfolio(data);
+    initHeroTilt();
+  })
+  .catch(err => console.error('Gagal memuat data.json:', err));
+
+function initPortfolio(data) {
     // Hero
-    document.getElementById('hero').innerHTML = `
-      <img src="${data.hero.image}" alt="Profile" class="mx-auto rounded-full mb-8 w-44 h-44 object-cover shadow-2xl border-4 border-white dark:border-blue-500 p-1 hover:scale-105 transition-transform duration-500" />
-      <h2 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight text-blue-950 dark:text-white">${data.hero.name}</h2>
-      <p class="text-xl text-blue-900 dark:text-blue-400 font-bold mb-6 uppercase tracking-widest">${data.hero.title}</p>
-      <p class="text-blue-950 dark:text-blue-100 text-lg max-w-lg mx-auto font-medium leading-relaxed">${data.hero.description}</p>
+    document.getElementById('hero-3d').innerHTML = `
+      <img src="${data.hero.image}" alt="Foto profil ${data.hero.name}" loading="eager"
+           class="mx-auto rounded-full mb-8 w-44 h-44 object-cover shadow-2xl border-4 border-white dark:border-pink-500 p-1 hover:scale-105 transition-transform duration-500" />
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">${data.hero.name}</h2>
+      <p class="text-base text-pink-600 dark:text-pink-400 font-semibold mb-6 uppercase tracking-[0.2em]">${data.hero.title}</p>
+      <p class="text-gray-600 dark:text-pink-100/80 text-lg max-w-lg mx-auto leading-relaxed">${data.hero.description}</p>
+    `;
+    // CTA buttons di luar hero-3d agar tidak ikut tilt
+    document.getElementById('hero-cta').innerHTML = `
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://github.com/Sivana30?tab=repositories" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-2xl shadow-lg hover:-translate-y-1 active:scale-95 transition-all duration-300">
+          <span>💻</span> View My Repos
+        </a>
+        <a href="#projects"
+           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/40 dark:bg-white/10 border border-pink-300 dark:border-pink-700 hover:bg-pink-100 dark:hover:bg-pink-900/30 font-bold rounded-2xl shadow-lg hover:-translate-y-1 active:scale-95 transition-all duration-300">
+          <span>📂</span> See Projects
+        </a>
+      </div>
     `;
 
     // About
-    document.getElementById('aboutText').textContent = data.about;
+    document.getElementById('aboutText').textContent = data.about.text;
+
+    // Strengths
+    document.getElementById('strengthsContainer').innerHTML = (data.strengths || []).map((s, i) => `
+      <div class="p-7 bg-white/20 dark:bg-pink-900/20 rounded-2xl border border-white/10 dark:border-blue-800/50 backdrop-blur-sm shadow-sm" data-aos="fade-up" data-aos-delay="${i*100}">
+        <div class="text-3xl mb-4">${s.icon}</div>
+        <h3 class="text-base font-bold mb-1.5 text-gray-900 dark:text-white">${s.title}</h3>
+        <p class="text-sm text-gray-500 dark:text-pink-100/60 leading-relaxed">${s.desc}</p>
+      </div>
+    `).join('');
+
+    // Education
+    if (data.education) {
+      const edu = data.education;
+      document.getElementById('educationContainer').innerHTML = `
+        <div class="p-8 bg-white/20 dark:bg-pink-900/20 rounded-3xl border border-white/10 dark:border-blue-800/50 backdrop-blur-sm shadow-sm max-w-2xl">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${edu.degree}</h3>
+          <p class="text-base font-semibold text-gray-700 dark:text-pink-200/80 mb-1">${edu.campus}</p>
+          <p class="text-sm text-gray-400 dark:text-pink-100/50 font-medium mb-5">${edu.period}</p>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="px-4 py-1.5 bg-pink-100 dark:bg-pink-800/40 text-pink-700 dark:text-pink-200 rounded-full text-xs font-semibold">IPK ${edu.gpa}</span>
+            <span class="px-4 py-1.5 bg-purple-100 dark:bg-purple-800/40 text-purple-700 dark:text-purple-200 rounded-full text-xs font-semibold">${edu.predicate}</span>
+            <span class="px-4 py-1.5 bg-amber-100 dark:bg-amber-800/40 text-amber-700 dark:text-amber-200 rounded-full text-xs font-semibold">🎓 ${edu.achievement}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // Experience
+    document.getElementById('experienceContainer').innerHTML = (data.experience || []).map((exp, i) => `
+      <div class="p-8 bg-white/20 dark:bg-pink-900/20 rounded-3xl border border-white/10 dark:border-blue-800/50 backdrop-blur-sm shadow-sm" data-aos="fade-up" data-aos-delay="${i*150}">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-5">
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white">${exp.role}</h3>
+            <p class="text-sm font-medium text-gray-500 dark:text-pink-200/60 mt-0.5">${exp.company}</p>
+          </div>
+          <span class="mt-2 sm:mt-0 px-4 py-1.5 bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-pink-200/70 rounded-full text-xs font-semibold whitespace-nowrap">${exp.period}</span>
+        </div>
+        <ul class="space-y-3">
+          ${exp.points.map(pt => `
+            <li class="flex gap-3 text-sm text-gray-600 dark:text-pink-100/70 leading-relaxed">
+              <span class="text-pink-400 mt-1 shrink-0">▸</span>
+              <span>${pt}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `).join('');
 
     // Skills
-    document.getElementById('skillsContainer').innerHTML = data.skills.map((skill, i) => `
-      <div class="p-5 bg-white/20 dark:bg-blue-900/20 rounded-2xl border border-white/10 dark:border-blue-800/50 text-center font-bold backdrop-blur-sm shadow-sm" data-aos="fade-up" data-aos-delay="${i*100}">
-        ${skill}
+    const skillItem = (text) => `
+      <div class="flex items-center gap-3 p-3.5 bg-white/10 dark:bg-pink-900/10 rounded-xl border border-white/5 dark:border-blue-800/30 hover:bg-white/25 dark:hover:bg-pink-900/20 transition-colors duration-200">
+        <span class="w-1.5 h-1.5 rounded-full bg-pink-400 shrink-0"></span>
+        <span class="text-sm text-gray-700 dark:text-pink-100/80 font-medium">${text}</span>
+      </div>
+    `;
+    document.getElementById('skillsAdminContainer').innerHTML = (data.skills?.admin || []).map(skillItem).join('');
+    document.getElementById('skillsPersonalContainer').innerHTML = (data.skills?.personal || []).map(skillItem).join('');
+
+    // Programming Languages
+    const langIconUrl = (icon) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`;
+    document.getElementById('languagesContainer').innerHTML = (data.programmingLanguages || []).map((lang, i) => `
+      <div class="lang-card relative p-6 bg-white/20 dark:bg-pink-900/20 rounded-3xl border border-white/10 dark:border-blue-800/50 backdrop-blur-sm shadow-lg text-center w-36 cursor-default" data-aos="zoom-in" data-aos-delay="${i*120}">
+        <div class="lang-glow" style="background:${lang.color}"></div>
+        <div class="lang-icon relative z-10 mb-3">
+          <img src="${langIconUrl(lang.icon)}" alt="${lang.name}" class="w-14 h-14 mx-auto drop-shadow-lg" onerror="this.style.display='none'" />
+        </div>
+        <p class="relative z-10 font-bold text-sm" style="color:${lang.color}">${lang.name}</p>
+      </div>
+    `).join('');
+
+    // Certifications
+    document.getElementById('certsContainer').innerHTML = (data.certifications || []).map((cert, i) => `
+      <div class="flex items-start gap-3 p-4 bg-white/20 dark:bg-pink-900/20 rounded-2xl border border-white/10 dark:border-blue-800/50 backdrop-blur-sm shadow-sm" data-aos="fade-up" data-aos-delay="${i*80}">
+        <span class="text-pink-500 mt-0.5 shrink-0">🏆</span>
+        <span class="text-sm font-medium leading-relaxed">${cert}</span>
       </div>
     `).join('');
 
     // Projects
     document.getElementById('projectsContainer').innerHTML = data.projects.map((p, i) => `
-      <div class="bg-white/20 dark:bg-blue-900/20 rounded-3xl shadow-xl overflow-hidden border border-white/10 dark:border-blue-800/50 group" data-aos="fade-up" data-aos-delay="${i*200}">
+      <a href="${p.link}" target="_blank" rel="noopener noreferrer"
+         class="bg-white/20 dark:bg-pink-900/20 rounded-3xl shadow-xl overflow-hidden border border-white/10 dark:border-blue-800/50 group block" data-aos="fade-up" data-aos-delay="${i*200}">
         <div class="overflow-hidden h-52">
-          <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+          <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
         </div>
         <div class="p-6 text-left">
-          <h3 class="font-bold text-xl mb-2 text-blue-900 dark:text-blue-300">${p.title}</h3>
-          <p class="text-blue-950 dark:text-blue-100 text-sm font-medium leading-relaxed">${p.description}</p>
+          <h3 class="font-bold text-xl mb-2 text-pink-900 dark:text-pink-300">${p.title}</h3>
+          <p class="text-pink-950 dark:text-pink-100 text-sm font-medium leading-relaxed">${p.description}</p>
         </div>
-      </div>
+      </a>
     `).join('');
 
-    // Social Media (Fixed for Mobile Click)
+    // Social Media
     document.getElementById('socialsContainer').innerHTML = data.socials.map(s => `
-      <a href="${s.link}" target="_blank" rel="noopener noreferrer" 
+      <a href="${s.link}" target="_blank" rel="noopener noreferrer"
          class="flex items-center justify-center gap-3 px-8 py-4 w-full sm:w-auto bg-white/40 dark:bg-blue-600 rounded-2xl font-bold shadow-lg hover:-translate-y-2 active:scale-95 transition-all duration-300">
         <span class="text-2xl">${s.icon}</span>
         <span class="tracking-wide">${s.platform}</span>
       </a>
     `).join('');
+
+    // Footer
+    const year = new Date().getFullYear();
+    document.querySelector('footer p').innerHTML = `&copy; ${year} ${data.hero.name}. ${data.footer}`;
 }
 
-// Dark Mode Logic
-function toggleDarkMode() {
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+/* ==== 3D tilt effect pada hero ==== */
+function initHeroTilt() {
+  const hero = document.getElementById('hero-3d');
+  const heroWrap = document.getElementById('hero');
+  if (!hero || !heroWrap) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if ('ontouchstart' in window) return;
+
+  let raf = null;
+  const MAX_TILT = 10;
+
+  function applyTilt() {
+    const rect = heroWrap.getBoundingClientRect();
+    const px = (applyTilt._e.clientX - rect.left) / rect.width  - 0.5;
+    const py = (applyTilt._e.clientY - rect.top)  / rect.height - 0.5;
+    hero.style.transform =
+      `perspective(900px) rotateX(${-py * MAX_TILT * 2}deg) rotateY(${px * MAX_TILT * 2}deg)`;
+  }
+
+  heroWrap.addEventListener('mousemove', (e) => {
+    applyTilt._e = e;
+    if (!raf) raf = requestAnimationFrame(() => { raf = null; applyTilt(); });
+  });
+
+  heroWrap.addEventListener('mouseleave', () => {
+    hero.style.transition = 'transform 0.6s ease';
+    hero.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+    setTimeout(() => { hero.style.transition = ''; }, 600);
+  });
 }
 
-if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark');
-}
-
-// Jalankan Inisialisasi
-initPortfolio();
+/* ==== WhatsApp Form Handler ==== */
+document.getElementById('waForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('waName').value.trim();
+  const company = document.getElementById('waCompany').value.trim();
+  const message = document.getElementById('waMessage').value.trim();
+  const waNumber = '6285715632717';
+  const text = `Halo, saya *${name}* dari *${company}*%0A%0A${encodeURIComponent(message)}`;
+  window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+});
 </script>
 
 </body>

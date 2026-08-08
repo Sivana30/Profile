@@ -1,28 +1,132 @@
 {
+  "meta": {
+    "title": "Sivana Amelia Irmayanti | Staf Administrasi & Operasional",
+    "description": "Portofolio Sivana Amelia Irmayanti — Lulusan S1 Teknik Informatika IPK 3,80 (Pujian), berpengalaman di administrasi perkantoran, pengelolaan dokumen, dan koordinasi operasional.",
+    "keywords": "Sivana Amelia, Administrasi, Operasional, Microsoft Office, Customer Service, Portfolio",
+    "author": "Sivana Amelia Irmayanti",
+    "canonical": "https://sivanaamelia.github.io/",
+    "image": "assets/images/AMEL.avif"
+  },
   "hero": {
     "name": "Sivana Amelia Irmayanti",
-    "title": "Web | Gamer | Admin Antusias",
-    "description": "I build modern and responsive web applications.",
-    "image": "AMEL.jpeg"
+    "title": "Staf Administrasi & Operasional",
+    "description": "Lulusan S1 Teknik Informatika IPK 3,80 (Predikat Pujian) dengan pengalaman di administrasi perkantoran, pengelolaan dokumen, dan koordinasi operasional. Teliti, terorganisir, dan mudah beradaptasi.",
+    "image": "assets/images/AMEL.avif"
   },
-  "about": "Saya adalah developer yang fokus pada pembuatan website modern dan user-friendly.",
-  "skills": ["HTML", "CSS", "JavaScript", "React", "Python"],
+  "about": {
+    "text": "Saya adalah lulusan S1 Teknik Informatika dari Institut Teknologi Adhi Tama Surabaya (ITATS) dengan IPK 3,80 (Predikat Pujian). Memiliki pengalaman nyata di bidang administrasi perkantoran, pengelolaan dokumen, dan koordinasi operasional tim. Terbiasa menangani korespondensi, pengarsipan, rekapitulasi data, serta komunikasi dengan berbagai pihak. Saya teliti, terorganisir, mampu bekerja mandiri maupun dalam tim, dan mudah beradaptasi dengan lingkungan kerja baru."
+  },
+  "strengths": [
+    { "icon": "📋", "title": "Administrasi & Arsip", "desc": "Rapi dalam pengelolaan dokumen, surat-menyurat, dan pengarsipan" },
+    { "icon": "💬", "title": "Komunikasi Aktif", "desc": "Berpengalaman menangani pelanggan & koordinasi lintas tim" },
+    { "icon": "📊", "title": "Pengolahan Data", "desc": "Mahir Microsoft Office: Word, Excel, PowerPoint untuk rekap & laporan" }
+  ],
+  "experience": [
+    {
+      "role": "Asisten Laboratorium & Staf Administrasi",
+      "company": "Institut Teknologi Adhi Tama Surabaya (ITATS)",
+      "period": "Agustus 2022 – Juli 2023",
+      "points": [
+        "Mengelola seluruh administrasi laboratorium: pembuatan surat, penyusunan laporan kegiatan, dan dokumentasi",
+        "Merekap nilai dan data praktikum mahasiswa secara akurat menggunakan Microsoft Word dan Excel",
+        "Membimbing dan berkoordinasi dengan puluhan praktikan setiap semester dalam kegiatan praktikum",
+        "Mendapat Sertifikat Penghargaan atas dedikasi dan profesionalisme selama 2 periode (2022/2023 & 2023/2024)"
+      ]
+    },
+    {
+      "role": "Admin & Customer Service",
+      "company": "RITZGLAM",
+      "period": "Mei 2024 – Juli 2024",
+      "points": [
+        "Mengelola komunikasi aktif dengan pelanggan melalui platform chat, memastikan respons cepat dan pelayanan prima",
+        "Membuat konten deskripsi produk dan materi promosi secara tertulis (copywriting)",
+        "Mendukung operasional harian tim dan koordinasi tugas antar divisi",
+        "Membantu pencatatan dan pengelolaan data pesanan pelanggan"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "S1 Teknik Informatika",
+    "campus": "Institut Teknologi Adhi Tama Surabaya (ITATS)",
+    "period": "2020 – 2025",
+    "gpa": "3,80 / 4,00",
+    "predicate": "Predikat Pujian",
+    "achievement": "Wisudawan Berprestasi"
+  },
+  "skills": {
+    "admin": [
+      "Microsoft Word — pengetikan, surat, laporan",
+      "Microsoft Excel — rekap data, tabel, formula",
+      "Microsoft PowerPoint — presentasi",
+      "Pengelolaan arsip fisik & digital",
+      "Pengetikan cepat & akurat"
+    ],
+    "personal": [
+      "Komunikasi lisan & tulisan yang baik",
+      "Pelayanan pelanggan / customer service",
+      "Kerja tim & koordinasi lintas departemen",
+      "Teliti, rapi, dan berorientasi pada detail",
+      "Bahasa Indonesia (fasih) | Bahasa Inggris (dasar)"
+    ]
+  },
+  "programmingLanguages": [
+    { "name": "PHP", "color": "#777BB4", "icon": "php" },
+    { "name": "HTML5", "color": "#E34F26", "icon": "html5" },
+    { "name": "CSS3", "color": "#1572B6", "icon": "css3" },
+    { "name": "JavaScript", "color": "#F7DF1E", "icon": "javascript" },
+    { "name": "Java", "color": "#007396", "icon": "java" }
+  ],
+  "certifications": [
+    "Piagam Wisudawan Berprestasi — ITATS, November 2025",
+    "Sertifikat TEFL — ITATS Language Centre, 2025",
+    "Sertifikat BNSP Junior Web Developer — BNSP, 2023",
+    "Sertifikat Penelitian Aplikasi Prediksi Status Stunting Balita — 2023",
+    "Sertifikat MBKM Studi Independen — PT Arkatama Multi Solusindo, 2022",
+    "Sertifikat Penghargaan Asisten Laboratorium — ITATS, 2022/2023 & 2023/2024",
+    "Sertifikat Pemakalah Seminar Nasional Implementasi TIK IV — ITATS, Juli 2023"
+  ],
   "socials": [
-    { "platform": "Instagram", "link": "https://instagram.com/username", "icon": "📸" },
-    { "platform": "GitHub", "link": "https://github.com/username", "icon": "💻" },
-    { "platform": "LinkedIn", "link": "https://linkedin.com/in/username", "icon": "👔" },
-    { "platform": "Discord", "link": "#", "icon": "🎮" }
+    { "platform": "GitHub", "link": "https://github.com/Sivana30", "icon": "💻" },
+    { "platform": "Email", "link": "mailto:sivanaamelia30@gmail.com", "icon": "✉️" },
+    { "platform": "WhatsApp", "link": "https://wa.me/6285715632717", "icon": "📱" }
   ],
   "projects": [
     {
-      "title": "Portfolio Website",
-      "description": "Website portfolio modern",
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+      "title": "Profile",
+      "description": "Halaman profil personal yang dibangun dengan HTML.",
+      "image": "assets/images/profile.avif",
+      "link": "https://github.com/Sivana30/Profile"
     },
     {
-      "title": "Dashboard App",
-      "description": "Admin dashboard UI",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"
+      "title": "Web Perpustakaan KP",
+      "description": "Aplikasi website perpustakaan untuk keperluan kerja praktik, dibangun dengan PHP.",
+      "image": "assets/images/perpus.avif",
+      "link": "https://github.com/Sivana30/Web-Perpustakaan-KP"
+    },
+    {
+      "title": "Website Pet Shop",
+      "description": "Tugas akhir website Pet Shop untuk program SIB Arkatama, dibangun dengan PHP.",
+      "image": "assets/images/petshop.avif",
+      "link": "https://github.com/Sivana30/TugasAkhirWebsitePetShop-SIB-Arkatama"
+    },
+    {
+      "title": "Dokumentasi API",
+      "description": "Proyek dokumentasi API dengan PHP.",
+      "image": "assets/images/api.avif",
+      "link": "https://github.com/Sivana30/dokumentasiapi"
+    },
+    {
+      "title": "Project Basis Data",
+      "description": "Project mata kuliah Basis Data, dibangun dengan PHP.",
+      "image": "assets/images/database.avif",
+      "link": "https://github.com/Sivana30/07327ProjectBasisData"
+    },
+    {
+      "title": "Sistem Pemeriksaan Puskesmas",
+      "description": "Sistem pemeriksaan puskesmas berbasis Java untuk memudahkan proses pelayanan kesehatan.",
+      "image": "assets/images/puskesmas.avif",
+      "link": "https://github.com/Sivana30/07327_SistemPemeriksaanPuskesmas"
     }
-  ]
+  ],
+  "footer": "Crafted with ✨"
 }
